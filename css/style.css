@@ -1,4 +1,67 @@
 body {
-  background-color: aqua; }
+  margin: 0px;
+  padding: 0px;
+  font-family: 'PT Sans', sans-serif;
+  color: #8c8c8c;
+  font-size: 15px;
+}
 
+.main-header {
+  background-color: rgba(0, 0, 0, 0.52);
+  height: 100px;
+}
+
+.main-header .graybox {
+  background: url("../images/graybox.png");
+  max-width: 1304px;
+  height: 43px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header .graybox a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.main-header .graybox a:hover {
+  text-decoration: none;
+  color: #bb8e35;
+}
+
+.main-header .graybox .left-graybox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header .graybox .right-graybox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,60 @@
-body{background-color: aqua;}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PT Sans',
+        sans-serif;
+    color: #8c8c8c;
+    font-size: 15px;
+}
+
+// ################MIXINS###############
+@mixin flexcenter($ju-content: center, $al-items: center) {
+    display: flex;
+    justify-content: $ju-content;
+    align-items: $al-items;
+}
+
+@mixin links($color:rgb(187, 142, 53)) {
+    a {
+        text-decoration: none;
+        color: #fff;
+        transition: color .4s;
+        margin:10px;
+        text-transform: uppercase;
+
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $color;
+    }
+}
+
+// ################MIXINS###############
+
+//###############VARIABLES##############
+
+//###############VARIABLES##############
+
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.52);
+    height: 100px;
+
+    .graybox {
+        background: url("../images/graybox.png");
+        max-width: 1304px;
+        height: 43px;
+        margin: 0 auto 0 auto;
+        @include flexcenter;
+        @include links;
+
+        .left-graybox {
+            @include flexcenter(flex-start);
+        }
+
+        .right-graybox {
+            @include flexcenter(flex-end);
+        }
+    }
+}
