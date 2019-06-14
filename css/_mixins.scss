@@ -1,0 +1,21 @@
+// ################MIXINS###############
+@mixin flexcenter($ju-content: center, $al-items: center) {
+    display: flex;
+    justify-content: $ju-content;
+    align-items: $al-items;
+}
+
+@mixin links($color:rgb(187, 142, 53)) {
+    a {
+        text-decoration: none;
+        color: #fff;
+        transition: color .4s;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $color;
+    }
+}

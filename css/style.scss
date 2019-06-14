@@ -1,3 +1,5 @@
+@import "mixins";
+
 body {
     margin: 0px;
     padding: 0px;
@@ -7,44 +9,24 @@ body {
     font-size: 15px;
 }
 
-// ################MIXINS###############
-@mixin flexcenter($ju-content: center, $al-items: center) {
-    display: flex;
-    justify-content: $ju-content;
-    align-items: $al-items;
-}
-
-@mixin links($color:rgb(187, 142, 53)) {
-    a {
-        text-decoration: none;
-        color: #fff;
-        transition: color .4s;
-        margin:10px;
-        text-transform: uppercase;
-
-    }
-
-    a:hover {
-        text-decoration: none;
-        color: $color;
-    }
-}
-
-// ################MIXINS###############
 
 //###############VARIABLES##############
-
+$gboxfont: 14px;
+$navfontsize:20px;
+$goldhover:rgb(187, 142, 53);
+$sliderheight:610px;
 //###############VARIABLES##############
 
 
 .main-header {
-    background-color: rgba(0, 0, 0, 0.52);
-    height: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    // height: 100px;
+    font-size: $gboxfont;
 
     .graybox {
         background: url("../images/graybox.png");
         max-width: 1304px;
-        height: 43px;
+        // height: 43px;
         margin: 0 auto 0 auto;
         @include flexcenter;
         @include links;
@@ -56,5 +38,78 @@ body {
         .right-graybox {
             @include flexcenter(flex-end);
         }
+    }
+}
+
+.main-nav {
+    @include flexcenter;
+
+    ul {
+        display: block;
+        list-style: none;
+        margin: 10px 40px;
+        padding: 0;
+
+        :nth-child(3) {
+            margin-right: 100px;
+        }
+
+        :nth-child(4) {
+            margin-left: 100px;
+        }
+
+        :nth-child(6) {
+            border: 1px solid #fff;
+            border-radius: 5%;
+            transition: background-color .4s;
+
+            :hover {
+                background-color: $goldhover;
+                color: white;
+            }
+        }
+
+        li {
+            display: inline-block;
+            color: #fff;
+            padding: 10px;
+
+            font: {
+                size: $navfontsize;
+                family: 'Roboto Condensed', sans-serif;
+            }
+
+            text: {
+                align: center;
+                transform: uppercase;
+
+            }
+
+            @include links;
+
+        }
+    }
+}
+
+.slider {
+    height: $sliderheight;
+
+    .slider-item {
+        height: $sliderheight;
+    }
+
+    .img-1 {
+        background-image: url("../images/background1.jpg");
+        max-width: 100%;
+    }
+
+    .img-2 {
+        background-image: url("../images/background2.jpg");
+        max-width: 100%;
+    }
+
+    .img-3 {
+        background-image: url("../images/background3.jpg");
+        max-width: 100%;
     }
 }
